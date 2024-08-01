@@ -853,6 +853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   matchId: 2
   selectBox: {fileID: 1921479288}
+  IsClicked: 0
 --- !u!114 &72052969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2085,6 +2086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   matchId: 1
   selectBox: {fileID: 1921479288}
+  IsClicked: 0
 --- !u!114 &273642946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3847,6 +3849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   matchId: 1
   selectBox: {fileID: 1132271437}
+  IsClicked: 0
 --- !u!114 &539255347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4116,6 +4119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   matchId: 1
   selectBox: {fileID: 1654744632}
+  IsClicked: 0
 --- !u!114 &607172640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4716,6 +4720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   matchId: 3
   selectBox: {fileID: 1921479288}
+  IsClicked: 0
 --- !u!114 &734251060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4860,6 +4865,7 @@ MonoBehaviour:
   numberToDraw: 0
   numberSelected: 0
   isDragging: 0
+  numberOfBoxes: 0
   result: {fileID: 11400000, guid: f75d2345779932145a7b18a5d806f7cf, type: 2}
 --- !u!114 &770779274
 MonoBehaviour:
@@ -5613,6 +5619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   matchId: 1
   selectBox: {fileID: 1118337482}
+  IsClicked: 0
 --- !u!114 &918052590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6165,6 +6172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   matchId: 2
   selectBox: {fileID: 1132271437}
+  IsClicked: 0
 --- !u!114 &977904859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6836,6 +6844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   matchId: 4
   selectBox: {fileID: 1654744632}
+  IsClicked: 0
 --- !u!114 &1061976872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7413,6 +7422,7 @@ MonoBehaviour:
   numberToDraw: 0
   numberSelected: 0
   isDragging: 0
+  numberOfBoxes: 0
   result: {fileID: 11400000, guid: f75d2345779932145a7b18a5d806f7cf, type: 2}
 --- !u!114 &1118337483
 MonoBehaviour:
@@ -7522,6 +7532,7 @@ MonoBehaviour:
   numberToDraw: 0
   numberSelected: 0
   isDragging: 0
+  numberOfBoxes: 0
   result: {fileID: 11400000, guid: f75d2345779932145a7b18a5d806f7cf, type: 2}
 --- !u!114 &1132271438
 MonoBehaviour:
@@ -8024,6 +8035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   matchId: 2
   selectBox: {fileID: 1118337482}
+  IsClicked: 0
 --- !u!114 &1177802659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9508,6 +9520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   matchId: 2
   selectBox: {fileID: 1654744632}
+  IsClicked: 0
 --- !u!114 &1493493718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9987,6 +10000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   matchId: 4
   selectBox: {fileID: 1118337482}
+  IsClicked: 0
 --- !u!114 &1526530583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10688,6 +10702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   matchId: 3
   selectBox: {fileID: 1118337482}
+  IsClicked: 0
 --- !u!114 &1590061023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11480,6 +11495,7 @@ MonoBehaviour:
   numberToDraw: 0
   numberSelected: 0
   isDragging: 0
+  numberOfBoxes: 0
   result: {fileID: 11400000, guid: f75d2345779932145a7b18a5d806f7cf, type: 2}
 --- !u!114 &1654744633
 MonoBehaviour:
@@ -11714,6 +11730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   matchId: 4
   selectBox: {fileID: 1921479288}
+  IsClicked: 0
 --- !u!114 &1682428517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12223,6 +12240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   matchId: 4
   selectBox: {fileID: 1132271437}
+  IsClicked: 0
 --- !u!114 &1730342597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13091,6 +13109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   matchId: 3
   selectBox: {fileID: 770779273}
+  IsClicked: 0
 --- !u!114 &1812120744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13524,6 +13543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   matchId: 4
   selectBox: {fileID: 770779273}
+  IsClicked: 0
 --- !u!114 &1882709474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13793,6 +13813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   matchId: 2
   selectBox: {fileID: 770779273}
+  IsClicked: 0
 --- !u!114 &1914238172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13937,6 +13958,7 @@ MonoBehaviour:
   numberToDraw: 0
   numberSelected: 0
   isDragging: 0
+  numberOfBoxes: 0
   result: {fileID: 11400000, guid: f75d2345779932145a7b18a5d806f7cf, type: 2}
 --- !u!114 &1921479289
 MonoBehaviour:
@@ -14171,6 +14193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   matchId: 3
   selectBox: {fileID: 1654744632}
+  IsClicked: 0
 --- !u!114 &1929393247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15852,6 +15875,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2054305279}
   m_CullTransparentMesh: 1
+--- !u!1 &2061350950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2061350952}
+  - component: {fileID: 2061350951}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2061350951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061350950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06fc6cad0bf95114b82b0c572ea2cf03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas:
+  - {fileID: 370127436}
+  - {fileID: 344358374}
+  - {fileID: 2021930360}
+  - {fileID: 1401785596}
+  - {fileID: 251836203}
+  quantity: 0
+  result: {fileID: 11400000, guid: f75d2345779932145a7b18a5d806f7cf, type: 2}
+--- !u!4 &2061350952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061350950}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 301.4245, y: 255.24422, z: -3.7051065}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2072809566
 GameObject:
   m_ObjectHideFlags: 0
@@ -16012,6 +16087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   matchId: 3
   selectBox: {fileID: 1132271437}
+  IsClicked: 0
 --- !u!114 &2072809570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16296,6 +16372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   matchId: 1
   selectBox: {fileID: 770779273}
+  IsClicked: 0
 --- !u!114 &2105995306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16536,3 +16613,4 @@ SceneRoots:
   - {fileID: 1401785597}
   - {fileID: 251836204}
   - {fileID: 778658168}
+  - {fileID: 2061350952}

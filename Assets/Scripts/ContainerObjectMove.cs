@@ -7,7 +7,6 @@ public class ContainerObjectMove : MonoBehaviour
     [SerializeField] int matchId;
     [SerializeField] ControllerBoxToPressAndMove controller;
     [SerializeField] RectTransform RectTransform;
-
     public void OnCLick()
     {
         controller.numberToContainer = matchId;

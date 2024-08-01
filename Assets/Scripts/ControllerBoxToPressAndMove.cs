@@ -14,6 +14,7 @@ public class ControllerBoxToPressAndMove : MonoBehaviour
     public int numberToContainer;
     Vector2 originalPosition;
     private int numberOfCorrectAnswer;
+    public int numberOfBoxPut;
     [SerializeField] ResultData result;
     public void Compare()
     {
@@ -29,6 +30,10 @@ public class ControllerBoxToPressAndMove : MonoBehaviour
                 result.correctAnswer++;
                 GameController.nextLevel?.Invoke();
             }
+            if (numberOfBoxPut == 10)
+            {
+                GameController.nextLevel?.Invoke();
+            }
             numberToObjectMove = 0;
             numberToContainer = 0;
         }
@@ -36,17 +41,21 @@ public class ControllerBoxToPressAndMove : MonoBehaviour
         {
             Debug.Log("IncorrectForm");
             boxSelected.position = containerBox.position;
-            StartCoroutine(ResetBox());
+            if (numberOfBoxPut >= 10)
+            {
+                GameController.nextLevel?.Invoke();
+            }
+            //StartCoroutine(ResetBox());
         }
 
     }
-    IEnumerator ResetBox()
-    {
-        yield return new WaitForSeconds(0.5f);
-        boxSelected.position = originalPosition;
-        numberToObjectMove = 0;
-        numberToContainer = 0;
-    }
+    //IEnumerator ResetBox()
+    //{
+    //    yield return new WaitForSeconds(0.5f);
+    //    boxSelected.position = originalPosition;
+    //    numberToObjectMove = 0;
+    //    numberToContainer = 0;
+    //}
     public void Set_OriginalPosition(Vector2 boxPosition)
     {
         originalPosition = boxPosition;

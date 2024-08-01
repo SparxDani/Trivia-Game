@@ -13,6 +13,7 @@ public class ObjectMatchingGame : MonoBehaviour
     //private bool isDragging;
     //private Vector3 endPoint;
     [SerializeField] SelectBox selectBox;
+    public bool IsClicked;
 
     private void Start()
     {
@@ -21,8 +22,19 @@ public class ObjectMatchingGame : MonoBehaviour
     }
     public void OnCLick()
     {
-        selectBox.Get_Button1(this.GetComponent<Image>());
-        selectBox.numberToDraw = matchId;
-        selectBox.DrawLine(lineRenderer);
+        if (IsClicked == false)
+        {
+            selectBox.Get_Button1(this.GetComponent<Image>());
+            selectBox.numberToDraw = matchId;
+            selectBox.DrawLine(lineRenderer);
+            selectBox.numberOfBoxes++;
+            IsClicked = true;
+        }
+        else
+        {
+            selectBox.Get_Button1(this.GetComponent<Image>());
+            selectBox.numberToDraw = matchId;
+            selectBox.DrawLine(lineRenderer);
+        }
     }
 }

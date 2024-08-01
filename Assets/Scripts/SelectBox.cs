@@ -12,6 +12,7 @@ public class SelectBox : MonoBehaviour
     public bool isDragging;
     private Vector3 endPoint;
     private int numberOfCorrectAnswer;
+    public int numberOfBoxes;
     Image button1;
     Image button2;
     [SerializeField] ResultData result;
@@ -60,12 +61,20 @@ public class SelectBox : MonoBehaviour
                 result.correctAnswer++;
                 GameController.nextLevel?.Invoke();
             }
+            if (numberOfBoxes == 4)
+            {
+                GameController.nextLevel?.Invoke();
+            }
         }
         else
         {
-            lineRenderer.positionCount = 0;
+            //lineRenderer.positionCount = 0;
             numberToDraw = 0;
             numberSelected = 0;
+            if (numberOfBoxes >= 4)
+            {
+                GameController.nextLevel?.Invoke();
+            }
         }
         lineRenderer.positionCount = 2;
     }

@@ -8,6 +8,7 @@ public class ObjectToMove : MonoBehaviour
     [SerializeField] Vector2 savePosition;
     [SerializeField] ControllerBoxToPressAndMove controller;
     [SerializeField] RectTransform rectTransform;
+    public bool IsClicked;
     public int Get_ID()
     {
         return matchId;
@@ -19,10 +20,25 @@ public class ObjectToMove : MonoBehaviour
     }
     public void OnClick()
     {
-        savePosition = rectTransform.position;
-        controller.numberToObjectMove = matchId;
-        controller.Set_TransformToTheBox(rectTransform);
-        controller.Set_OriginalPosition(savePosition);
-        controller.Isinmoving = true;
+        if (IsClicked==false)
+        {
+            savePosition = rectTransform.position;
+            controller.numberToObjectMove = matchId;
+            controller.Set_TransformToTheBox(rectTransform);
+            controller.Set_OriginalPosition(savePosition);
+            controller.Isinmoving = true;
+            controller.numberOfBoxPut++;
+            IsClicked = true;
+            Debug.Log("Me volvi verdadero");
+        }
+        else
+        {
+            savePosition = rectTransform.position;
+            controller.numberToObjectMove = matchId;
+            controller.Set_TransformToTheBox(rectTransform);
+            controller.Set_OriginalPosition(savePosition);
+            controller.Isinmoving = true;
+        }
+
     }
 }
