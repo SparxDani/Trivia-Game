@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     public static Action nextLevel;
     public int quantity;
     [SerializeField] ResultData result;
+    public static Action<bool> Register;
     private void Start()
     {
         result.correctAnswer = 0;
@@ -18,16 +19,23 @@ public class GameController : MonoBehaviour
     private void OnEnable()
     {
         nextLevel += IncrementIndex;
+        Register += OnResgister;
     }
     private void OnDisable()
     {
         nextLevel -= IncrementIndex;
+        Register -= OnResgister;
+
     }
     private void IncrementIndex()
     {
 
         quantity++;
         Debug.Log(quantity);
+        if(quantity == 1&& result.register == false) 
+        {
+            SceneManager.LoadScene("Testing");
+        }
         if (quantity < canvas.Length)
         {
             canvas[quantity - 1].gameObject.SetActive(false);
@@ -39,5 +47,9 @@ public class GameController : MonoBehaviour
         }
 
 
+    }
+    private void OnResgister(bool registrado)
+    {
+        result.register = registrado;
     }
 }
