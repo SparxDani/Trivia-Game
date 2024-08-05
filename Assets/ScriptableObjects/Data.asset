@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctAnswer: 0
   maxQuestion: 0
+  register: 0

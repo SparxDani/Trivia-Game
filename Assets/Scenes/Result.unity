@@ -558,6 +558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   result: {fileID: 11400000, guid: f75d2345779932145a7b18a5d806f7cf, type: 2}
+  users: {fileID: 11400000, guid: efc0626cbf7d032479df6c99a35818e8, type: 2}
   text: {fileID: 1100264635}
 --- !u!4 &587761966
 Transform:
@@ -888,7 +889,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -158, y: 109}
-  m_SizeDelta: {x: 290.8, y: 50.15}
+  m_SizeDelta: {x: 407.44, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1100264635
 MonoBehaviour:
@@ -910,10 +911,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Results
+  m_text: 'Puntuacion:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c58b070fbc9ed824a83f948c2ad225ab, type: 2}
-  m_sharedMaterial: {fileID: -1748842089994342156, guid: c58b070fbc9ed824a83f948c2ad225ab, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6e231a28c395a4745a0ad1759470c7d8, type: 2}
+  m_sharedMaterial: {fileID: 8638937716691819205, guid: 6e231a28c395a4745a0ad1759470c7d8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -937,8 +938,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29
-  m_fontSizeBase: 29
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -973,7 +974,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: -14.433441}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

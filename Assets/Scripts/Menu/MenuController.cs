@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
     [SerializeField] SceneData dataScene;
+    private void Start()
+    {
+        dataScene.OpcionMultiple = false;
+        dataScene.UniendoPorLineas = false;
+        dataScene.OrdenadoPorBloques = false;
+    }
     public void On_OptionMultiply()
     {
         dataScene.OpcionMultiple = true;

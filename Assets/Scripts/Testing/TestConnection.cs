@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 public class TestConnection : MonoBehaviour
 {
-    //mysql://root:SCjGXuTVHPyxmwEPUdVDlTTBAHKVeUwL@roundhouse.proxy.rlwy.net:55323/railway
-    //Server=roundhouse.proxy.rlwy.net;Database=railway;User=root;Password=SCjGXuTVHPyxmwEPUdVDlTTBAHKVeUwL;Port=55323;
+    //mysql://root:isVcFrfRTOCNcnQQYWkAVyXuogMgSBsr@roundhouse.proxy.rlwy.net:31463/railway
+    //Server=roundhouse.proxy.rlwy.net;Database=railway;User=root;Password=isVcFrfRTOCNcnQQYWkAVyXuogMgSBsr;Port=31463;
 
     private string connectionString;
     private MySqlConnection connection;
@@ -17,13 +18,45 @@ public class TestConnection : MonoBehaviour
     [SerializeField] TMP_Text emailLogin;
     [SerializeField] TMP_Text passwordLogin;
     [SerializeField] SceneData scene;
+    public static Action SetScore;
     private void Start()
     {
         // Configura la cadena de conexion
-        connectionString = "Server=roundhouse.proxy.rlwy.net;Database=railway;User=root;Password=SCjGXuTVHPyxmwEPUdVDlTTBAHKVeUwL;Port=55323;";
+        connectionString = "Server=roundhouse.proxy.rlwy.net;Database=railway;User=root;Password=isVcFrfRTOCNcnQQYWkAVyXuogMgSBsr;Port=31463;";
         ConnectToDatabase();
     }
+    private void OnEnable()
+    {
+        DontDestroyOnLoad(this);
+        SetScore += Setscore;
+    }
+    private void OnDisable()
+    {
+        SetScore -= Setscore;
+    }
+    private void Setscore()
+    {
+        if (usersA == null)
+        {
+            Debug.LogError("No hay usuario logeado.");
+            return;
+        }
 
+        try
+        {
+            string query = "UPDATE LogIn SET Score = @Score WHERE Id = @Id";
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@Score", usersA.Score);
+            cmd.Parameters.AddWithValue("@Id", usersA.Id);
+
+            cmd.ExecuteNonQuery();
+            Debug.Log("Score actualizado correctamente.");
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("Error al actualizar el score: " + e.Message);
+        }
+    }
     private void ConnectToDatabase()
     {
         try
@@ -39,7 +72,34 @@ public class TestConnection : MonoBehaviour
     }
     public void UploadData()
     {
-        InsertData(email.text, password.text, usersA.Score);
+        if (IsEmailRegistered(email.text))
+        {
+            Debug.LogError("El correo electrónico ya está registrado.");
+        }
+        else
+        {
+            InsertData(email.text, password.text, usersA.Score);
+        }
+        
+    }
+    public bool IsEmailRegistered(string email)
+    {
+        bool isRegistered = false;
+
+        try
+        {
+            string query = "SELECT COUNT(*) FROM LogIn WHERE Email = @email";
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@email", email);
+
+            isRegistered = Convert.ToInt32(cmd.ExecuteScalar()) > 0;
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("Error al verificar si el correo está registrado: " + e.Message);
+        }
+
+        return isRegistered;
     }
     public void DownloadData()
     {

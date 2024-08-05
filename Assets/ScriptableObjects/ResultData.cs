@@ -8,5 +8,4 @@ public class ResultData : ScriptableObject
     public int correctAnswer;
     public int maxQuestion;
     public bool register;
-
 }

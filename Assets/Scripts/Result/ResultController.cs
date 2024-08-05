@@ -6,6 +6,7 @@ using TMPro;
 public class ResultController : MonoBehaviour
 {
     [SerializeField] ResultData result;
+    [SerializeField] UsersData users;
     [SerializeField] TMP_Text text;
     public void On_Click()
     {
@@ -13,6 +14,8 @@ public class ResultController : MonoBehaviour
     }
     private void Start()
     {
-        text.text = "Results: " + result.correctAnswer + "/" + result.maxQuestion;
+        text.text = "Puntuación: " + result.correctAnswer + "/" + result.maxQuestion;
+        users.Score += result.correctAnswer;
+        TestConnection.SetScore?.Invoke();
     }
 }
